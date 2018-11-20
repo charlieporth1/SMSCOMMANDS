@@ -17,6 +17,7 @@
     "browserify": "^16.2.3",
     "child-process-promise": "^2.2.1",
     "express": "^4.16.4",
-    "moment": "^2.22.2"
+    "moment": "^2.22.2",
+    "sanitize-html": "^1.19.1"
   }
 }
