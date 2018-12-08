@@ -41,7 +41,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
      let now = date.now()
     authCode = generateUUID().substr(0, 10);
     var exec = require('child-process-promise').exec;
-    exec(' ssh grandmaroot "if [ ! -z "$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'| grep -v \'root\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'); echo $userschanged"+ authCode +" |  chpasswd; fi" ')
+    exec(' ssh grandmaroot "if [ ! -z "$( last -w | awk \'{print $1}\'  | sed -n \'1p\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $( last -w | awk \'{print $1}\'  | sed -n \'1p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$( last -w | awk \'{print $1}\'  | sed -n \'1p\'); echo $userschanged"+ authCode +" |  chpasswd; fi" ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
@@ -72,7 +72,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             wait(1000);
             res.status(200).send('Correct code but error: AT: '+ date).end();
         });
-    exec(' ssh ubuntuserverroot "if [ ! -z "$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'| grep -v \'root\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + + 'Date: '+ now + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'); echo $userschanged' + authCode +' |  chpasswd; fi" ')
+    exec(' ssh ubuntuserverroot "if [ ! -z "$( last -w | awk \'{print $1}\'  | sed -n \'1p\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + + 'Date: '+ now + ' USER: $( last -w | awk \'{print $1}\'  | sed -n \'1p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$( last -w | awk \'{print $1}\'  | sed -n \'1p\'); echo $userschanged' + authCode +' |  chpasswd; fi" ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
@@ -94,7 +94,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             wait(1000);
             res.status(200).send('Correct code but error: AT: '+ date).end();
         });
-    exec('. /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd ')
+    exec('. /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $( last -w | awk \'{print $1}\'  | sed -n \'1p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
