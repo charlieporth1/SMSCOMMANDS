@@ -15,7 +15,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 console.log('hello welcome to server defcon');
 // const moment = require('moment');
-var date = new Date();
+let date = new Date();
+const moment = require('moment');
 function wait(ms) {
     const start = new Date().getTime();
     let end = start;
@@ -37,10 +38,10 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-YES', (req, res) => {
     res.status(200).send('Ok DEFCON 5, all is clear').end();
 });
 app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
-
-    authCode = generateUUID();
+     let now = date.now()
+    authCode = generateUUID().substr(0, 10);
     var exec = require('child-process-promise').exec;
-    exec(' ssh grandmaroot if [ ! -z "$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'| grep -v \'root\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'); echo $userschanged"+ authCode +" |  chpasswd; fi ')
+    exec(' ssh grandmaroot "if [ ! -z "$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'| grep -v \'root\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'); echo $userschanged"+ authCode +" |  chpasswd; fi" ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
@@ -48,20 +49,20 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             console.log('stderr: ', stderr);
             // | passwd $userschanged --stdin
             //w | awk '{print $1}'  | grep -v 'USER'  |  tail -n +2
-            exec(" export userschanged=$(w | awk '{print $1}'  | grep -v 'USER'  | sed -n '2p'); echo $userschanged"+ authCode +" |  chpasswd")
-                .then(function (result) {
-                    var stdout = result.stdout;
-                    var stderr = result.stderr;
-                    console.log('stdout: ', stdout);
-                    console.log('stderr: ', stderr);
-                })
-                .catch(function (err) {
-                    console.error('ERROR: ', err);
-                    wait(1000);
-                    res.status(200).send('Correct code but error: '+ err).end()
-                    wait(1000);
-                    res.status(200).send('Correct code but error: AT: '+ date).end();
-                });
+            // exec(" export userschanged=$(w | awk '{print $1}'  | grep -v 'USER'  | sed -n '2p'); echo $userschanged"+ authCode +" |  chpasswd")
+            //     .then(function (result) {
+            //         var stdout = result.stdout;
+            //         var stderr = result.stderr;
+            //         console.log('stdout: ', stdout);
+            //         console.log('stderr: ', stderr);
+            //     })
+            //     .catch(function (err) {
+            //         console.error('ERROR: ', err);
+            //         wait(1000);
+            //         res.status(200).send('Correct code but error: '+ err).end()
+            //         wait(1000);
+            //         res.status(200).send('Correct code but error: AT: '+ date).end();
+            //     });
 
         })
         .catch(function (err) {
@@ -71,7 +72,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             wait(1000);
             res.status(200).send('Correct code but error: AT: '+ date).end();
         });
-    exec(' ssh ubuntuserverroot if [ ! -z "$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'| grep -v \'root\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'); echo $userschanged"+ authCode +" |  chpasswd; fi ')
+    exec(' ssh ubuntuserverroot "if [ ! -z "$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'| grep -v \'root\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + + 'Date: '+ now + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\'); echo $userschanged' + authCode +' |  chpasswd; fi" ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
@@ -93,7 +94,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             wait(1000);
             res.status(200).send('Correct code but error: AT: '+ date).end();
         });
-    exec('. /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd ')
+    exec('. /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $(w | awk \'{print $1}\'  | grep -v \'USER\'  | sed -n \'2p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
@@ -112,7 +113,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
         });
 
 
-    console.log('authCode', authCode);
+    // console.log('authCode', authCode);
     // var createtextbox =  document.createElement("INPUT");
     // var submit = document.createElement("BUTTON");
     // createtextbox.setAttribute("type", "text");
