@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 console.log('hello welcome to server defcon');
 // const moment = require('moment');
 let date = new Date();
-const moment = require('moment');
+// const moment = require('moment');
 function wait(ms) {
     const start = new Date().getTime();
     let end = start;
@@ -41,7 +41,7 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
      let now = date.now()
     authCode = generateUUID().substr(0, 10);
     var exec = require('child-process-promise').exec;
-    exec(' ssh grandmaroot "if [ ! -z "$( last -w | awk \'{print $1}\'  | sed -n \'1p\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + 'Date: '+ now + ' USER: $( last -w | awk \'{print $1}\'  | sed -n \'1p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$( last -w | awk \'{print $1}\'  | sed -n \'1p\'); echo $userschanged"+ authCode +" |  chpasswd; fi" ')
+    exec(' ssh grandmaroot \'if [ ! -z "$( last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'")" ]; then source /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + '; Date: '+ now + '; Host: ' + '$HOSTNAME;  USER: $( last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'") " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$( last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'"); echo $userschanged '+ authCode +' |  chpasswd; fi\' ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
@@ -72,12 +72,12 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             wait(1000);
             res.status(200).send('Correct code but error: AT: '+ date).end();
         });
-    exec(' ssh ubuntuserverroot "if [ ! -z "$( last -w | awk \'{print $1}\'  | sed -n \'1p\')" ]; then . /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + + 'Date: '+ now + ' USER: $( last -w | awk \'{print $1}\'  | sed -n \'1p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$( last -w | awk \'{print $1}\'  | sed -n \'1p\'); echo $userschanged' + authCode +' |  chpasswd; fi" ')
+    exec(' ssh ubuntuserverroot \'if [ ! -z "$( last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'")" ]; then source /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + '; Date: '+ now + '; Host: ' + '$HOSTNAME; USER: $( last -w | awk "'"{print $1}"\'"  | sed -n "\'"1p"\'") " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$( last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'"); echo $userschanged' + authCode +' |  chpasswd; fi\' ')
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
             console.log('stdout: ', stdout);
-            console.log('stderr: ', stderr);
+            console.log('stderr: ', stderr);e
             tch(function (err) {
                 console.error('ERROR: ', err);
                 wait(1000);
