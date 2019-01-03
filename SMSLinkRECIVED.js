@@ -11,7 +11,7 @@ var dd_options = {
 var connect_datadog = require('connect-datadog')(dd_options);
 
 // Add your other middlewares
-app.use(...);
+//app.use(...);
 
 // Add the datadog-middleware before your router
 app.use(connect_datadog);
