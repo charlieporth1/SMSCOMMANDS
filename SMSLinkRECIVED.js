@@ -1,6 +1,26 @@
 const app = require("express")();
 app.set("view engine", "pug");
 
+var StatsD = require('node-dogstatsd').StatsD;
+var dogstatsd = new StatsD();
+var dd_options = {
+  'response_code':true,
+  'tags': ['app:my_app']
+    }
+
+var connect_datadog = require('connect-datadog')(dd_options);
+
+// Add your other middlewares
+//app.use(...);
+
+// Add the datadog-middleware before your router
+app.use(connect_datadog);
+app.use(router);
+
+
+# Increment a counter.
+dogstatsd.increment('page.views')
+
 //Body parser setup
 const bodyParser = require('body-parser');
 var sanitizeHtml = require('sanitize-html');
