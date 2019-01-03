@@ -112,8 +112,6 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             var stderr = result.stderr;
             console.log('stdout: ', stdout);
             console.log('stderr: ', stderr);
-            wait(5000);
-            DEFCON1()
             // | passwd $userschanged --stdin
             //w | awk '{print $1}'  | grep -v 'USER'  |  tail -n +2
         })
@@ -126,6 +124,8 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             res.status(200).send('Correct code but error: AT: '+ date).end();
         });
 
+            wait(20000);
+            DEFCON1()
 
     // console.log('authCode', authCode);
     // var createtextbox =  document.createElement("INPUT");
