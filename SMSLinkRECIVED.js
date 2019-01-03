@@ -77,16 +77,8 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             var stdout = result.stdout;
             var stderr = result.stderr;
             console.log('stdout: ', stdout);
-            console.log('stderr: ', stderr);e
-            tch(function (err) {
-                console.error('ERROR: ', err);
-                wait(1000);
-                res.status(200).send('Correct code but error: '+ err).end()
-                wait(1000);
-                res.status(200).send('Correct code but error: AT: '+ date).end();
-            });
-
-        })
+            console.log('stderr: ', stderr);
+            })
         .catch(function (err) {
             console.error('ERROR: ', err);
             wait(1000);
@@ -100,6 +92,8 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
             var stderr = result.stderr;
             console.log('stdout: ', stdout);
             console.log('stderr: ', stderr);
+            wait(5000);
+            DEFCON1()
             // | passwd $userschanged --stdin
             //w | awk '{print $1}'  | grep -v 'USER'  |  tail -n +2
         })
@@ -131,7 +125,7 @@ function getData(form) {
 function DEFCON1() {
 
     // if (authCode === AuthCodes) {
-        wait(1000);
+        wait(10000);
         var exec = require('child-process-promise').exec;
 
         exec('sudo defcon1')
@@ -141,11 +135,11 @@ function DEFCON1() {
                 console.log('stdout: ', stdout);
                 console.log('stderr: ', stderr);
                 res.status(200).send('OK, DEFCON 1 rebooting all nodes!: AT: ' + date).end();
-                wait(1000);
+                wait(5000);
                 res.status(200).send('OK, DEFCON 1 rebooting all nodes!: ' + stderr).end();
-                wait(1000);
+                wait(5000);
                 res.status(200).send('OK, DEFCON 1 rebooting all nodes!: ' + stdout).end()
-                wait(1000);
+                wait(5000);
             })
             .catch(function (err) {
                 console.error('ERROR: ', err);
