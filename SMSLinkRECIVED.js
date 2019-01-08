@@ -18,7 +18,7 @@ app.use(connect_datadog);
 app.use(router);
 
 
-# Increment a counter.
+// Increment a counter.
 dogstatsd.increment('page.views')
 
 //Body parser setup
