@@ -1,3 +1,4 @@
+//Increment a counter.
 const app = require("express")();
 app.set("view engine", "pug");
 
@@ -18,11 +19,6 @@ app.use(connect_datadog);
 //app.use(router);
 
 
-<<<<<<< HEAD
-// Increment a counter.
-=======
-//Increment a counter.
->>>>>>> e1f2a702aa4620462cfde6ebc2590014ee8a5f6f
 dogstatsd.increment('page.views')
 
 //Body parser setup
