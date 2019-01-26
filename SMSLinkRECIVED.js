@@ -15,7 +15,7 @@ var connect_datadog = require('connect-datadog')(dd_options);
 
 // Add the datadog-middleware before your router
 app.use(connect_datadog);
-app.use(router);
+//app.use(router);
 
 
 // Increment a counter.
