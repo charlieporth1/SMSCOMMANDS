@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="acb7da2e-86d6-4f1a-849d-f5c38c69c882" name="Default Changelist" comment="" />
+    <list default="true" id="acb7da2e-86d6-4f1a-849d-f5c38c69c882" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SMSLinkRECIVED.js" beforeDir="false" afterPath="$PROJECT_DIR$/SMSLinkRECIVED.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,16 +18,16 @@
     <session id="-379335127">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="15" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="3" />
+          <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,13 +44,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1409" />
+          <entry key="js" value="1446" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="1407" />
+          <entry key="JavaScript" value="1444" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -59,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SMSLinkRECIVED.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="60" column="21" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="21" />
+            <state relative-caret-position="140">
+              <caret line="98" column="435" selection-start-line="98" selection-start-column="435" selection-end-line="98" selection-end-column="435" />
             </state>
           </provider>
         </entry>
@@ -117,8 +120,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="29" />
-    <option name="y" value="60" />
+    <option name="x" value="25" />
+    <option name="y" value="39" />
     <option name="width" value="1400" />
     <option name="height" value="797" />
   </component>
@@ -201,16 +204,19 @@
       <workItem from="1546547142279" duration="574000" />
       <workItem from="1546554790338" duration="66000" />
       <workItem from="1548530865117" duration="182000" />
+      <workItem from="1549158623995" duration="46000" />
+      <workItem from="1549158706840" duration="454000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21529000" />
+    <option name="totallyTimeSpent" value="22029000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="60" width="1400" height="797" extended-state="0" />
+    <frame x="25" y="39" width="1400" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30655858" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3154016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -240,8 +246,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SMSLinkRECIVED.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="15" selection-end-line="60" selection-end-column="21" />
+        <state relative-caret-position="140">
+          <caret line="98" column="435" selection-start-line="98" selection-start-column="435" selection-end-line="98" selection-end-column="435" />
         </state>
       </provider>
     </entry>
