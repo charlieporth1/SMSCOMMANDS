@@ -64,14 +64,11 @@ app.get('/IT-WAS-ME/WAS-ME-LOGIN-NO', (req, res) => {
     const date30 = moment(now).add(1, 'M');
 
     authCode = generateUUID().substr(0, 16);
-<<<<<<< HEAD
+
     var exec = require('child-process-promise').exec;
 
 
     exec(' ssh ubuntuserverroot \' if [ -n "$(w | awk "\'""{print $1}"\'" | tail +3)" ]; then source /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + '; Date: '+ date + '; Host: ' + '$HOSTNAME; USER: $( last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'") " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd;  export userschanged=$(last -w | awk "\'"{print $1}"\'"  | sed -n "\'"1p"\'"); echo $userschanged' + authCode +' |  chpasswd; fi\' ')
-=======
-    exec(' ssh ubuntuserverroot \'if [ ! -z "$(last -w | awk \'{print $1}\'  | sed -n \'1p\')" ]; then source /usr/bin/cred.sh && sendemail -f $USER@otih-oith.us.to  -t $phonee  -m "Auth Code:  '+ authCode + '; Date: '+ date + '; Host: ' + '$HOSTNAME; USER: $(last -w | awk \'{print $1}\'  | sed -n \'1p\') " -s smtp.gmail.com:587 -o tls=yes -xu $usr -xp  $passwd &&  export userschanged=$(last -w | awk \'{print $1}\'  | sed -n \'1p\'); echo $userschanged' + authCode +' |  chpasswd; fi\' ')
->>>>>>> b05ce9ac08b808c4682c66663921a3bb0c4ad50f
         .then(function (result) {
             var stdout = result.stdout;
             var stderr = result.stderr;
