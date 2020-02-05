@@ -1,0 +1,99 @@
+[submodule "node_modules/node_modules"]
+	path = node_modules/node_modules
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/accepts/accepts"]
+	path = node_modules/accepts/accepts
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/acorn/acorn"]
+	path = node_modules/acorn/acorn
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/acorn-node/acorn-node"]
+	path = node_modules/acorn-node/acorn-node
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/acorn-walk/acorn-walk"]
+	path = node_modules/acorn-walk/acorn-walk
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/ansi-styles/ansi-styles"]
+	path = node_modules/ansi-styles/ansi-styles
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/array-filter/array-filter"]
+	path = node_modules/array-filter/array-filter
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/array-flatten/array-flatten"]
+	path = node_modules/array-flatten/array-flatten
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/array-map/array-map"]
+	path = node_modules/array-map/array-map
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/array-reduce/array-reduce"]
+	path = node_modules/array-reduce/array-reduce
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/array-uniq/array-uniq"]
+	path = node_modules/array-uniq/array-uniq
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/asn1.js/asn1.js"]
+	path = node_modules/asn1.js/asn1.js
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/assert/assert"]
+	path = node_modules/assert/assert
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/balanced-match/balanced-match"]
+	path = node_modules/balanced-match/balanced-match
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/base64-js/base64-js"]
+	path = node_modules/base64-js/base64-js
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/bn.js/bn.js"]
+	path = node_modules/bn.js/bn.js
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/body-parser/body-parser"]
+	path = node_modules/body-parser/body-parser
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/brace-expansion/brace-expansion"]
+	path = node_modules/brace-expansion/brace-expansion
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/brorand/brorand"]
+	path = node_modules/brorand/brorand
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify/browserify"]
+	path = node_modules/browserify/browserify
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify-aes/browserify-aes"]
+	path = node_modules/browserify-aes/browserify-aes
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify-cipher/browserify-cipher"]
+	path = node_modules/browserify-cipher/browserify-cipher
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify-des/browserify-des"]
+	path = node_modules/browserify-des/browserify-des
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify-rsa/browserify-rsa"]
+	path = node_modules/browserify-rsa/browserify-rsa
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify-sign/browserify-sign"]
+	path = node_modules/browserify-sign/browserify-sign
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browserify-zlib/browserify-zlib"]
+	path = node_modules/browserify-zlib/browserify-zlib
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browser-pack/browser-pack"]
+	path = node_modules/browser-pack/browser-pack
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/browser-resolve/browser-resolve"]
+	path = node_modules/browser-resolve/browser-resolve
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/buffer/buffer"]
+	path = node_modules/buffer/buffer
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/buffer-from/buffer-from"]
+	path = node_modules/buffer-from/buffer-from
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/buffer-xor/buffer-xor"]
+	path = node_modules/buffer-xor/buffer-xor
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/builtin-status-codes/builtin-status-codes"]
+	path = node_modules/builtin-status-codes/builtin-status-codes
+	url = https://github.com/charlieporth1/SMSCOMMANDS
+[submodule "node_modules/bytes/bytes"]
+	path = node_modules/bytes/bytes
+	url = https://github.com/charlieporth1/SMSCOMMANDS
